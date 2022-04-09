@@ -1,5 +1,5 @@
 class SulDB:
-	def __init__(DB, DBName) -> None: 
+	def __init__(DB, DBName: str) -> None: 
 		DB.DBName = DBName
 
 	def Create(DB) -> None:
