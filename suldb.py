@@ -1,5 +1,5 @@
 class SulDB:
-	def __init__(DB, DBName) -> None:
+	def __init__(DB, DBName) -> None: 
 		DB.DBName = DBName
 
 	def Create(DB) -> None:
@@ -23,10 +23,3 @@ class SulDB:
 		DataList = DB.Read()
 
 		return DataList.count(Data)
-
-	def Replace(DB, OldData: str, NewData: str) -> str:
-		with open(DB.DBName + ".suldb", "r") as DBFile:
-			Data = DBFile.read()
-		with open(DB.DBName + ".suldb", "w") as DBFile:
-			DBFile.write(Data.replace(OldData, NewData))
-		return Data
